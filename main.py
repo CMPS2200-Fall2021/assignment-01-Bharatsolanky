@@ -25,7 +25,7 @@ def longest_run(mylist, key):
             else:
                 temp1 = 0
 
-    num = temp2
+    num = max(temp2,temp1)
     return num
 
 
@@ -59,7 +59,7 @@ def longest_run_recursive(mylist, key):
 
 ## Feel free to add your own tests here.
 def test_longest_run():
-    assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
+    assert longest_run([2,12,12,8,12,12,12,0,12,1,12,12,12,12], 12) == 4
 
 def test_longest_run_recursive():
     assert longest_run_recursive([2,12,12,8,12,12,12,0,12,1], 12).longest_size == 3
